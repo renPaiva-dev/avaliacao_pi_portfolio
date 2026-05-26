@@ -1,70 +1,208 @@
-<!-- projetos.html -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
+    <meta name="description" content="Casos de estudo e detalhes técnicos dos projetos desenvolvidos por Pedro Sanchez.">
+    <meta name="author" content="Pedro Sanchez">
+    <title>Pedro Sanchez | Projetos Detalhados</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="projects-page">
 
-    <header>
+    <header class="header">
         <div class="logo">
-            <h1>Pedro Sanchez</h1>
+            <a href="index.html">
+                <span>&lt;PedroSanchez&gt;</span>
+            </a>
         </div>
-
-        <nav>
+        <nav class="navbar">
             <ul class="nav-links">
-                <li>
-                    <a href="#sobre">Sobre Mim</a>
-                </li>
-
-                <li>
-                    <a href="projetos.html">Projetos</a>
-                </li>
-
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="projetos.html" class="active">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="projects-detailed-main">
 
-        <section class="projects-section">
-            <h2>Meus Projetos</h2>
-
-            <article class="project-card">
-                <h3>Sistema de Tarefas</h3>
-
-                <p>
-                    Aplicação feita em Python para gerenciamento
-                    de tarefas.
-                </p>
-            </article>
-
-            <article class="project-card">
-                <h3>Calculadora Web</h3>
-
-                <p>
-                    Projeto utilizando HTML, CSS e JavaScript.
-                </p>
-            </article>
-
+        <section class="projects-hero">
+            <div class="section-title">
+                <h1>// _casos_de_estudo</h1>
+                <p class="hero-subtitle">Análise técnica detalhada sobre a arquitetura e as decisões por trás do código.</p>
+            </div>
         </section>
+
+        <div class="cases-container">
+
+            <article id="sistema-de-tarefas" class="project-case-card">
+                <div class="case-header">
+                    <div class="header-left">
+                        <div class="case-mini-thumb">
+                            <img src="img/projeto1.jpg" alt="Terminal CLI">
+                        </div>
+                        <h2>Sistema de Tarefas (CLI)</h2>
+                    </div>
+                    <div class="tech-badges">
+                        <span>Python</span>
+                        <span>Estruturas de Dados</span>
+                        <span>Modularidade</span>
+                    </div>
+                </div>
+
+                <div class="case-body">
+                    <div class="case-block">
+                        <h3>O Desafio</h3>
+                        <p>Criar uma aplicação de linha de comando robusta para gerenciamento de fluxo de trabalho, aplicando conceitos de persistência temporária e menus interativos sem dependências de interfaces gráficas pesadas.</p>
+                    </div>
+
+                    <div class="case-block">
+                        <h3>Decisões Técnicas</h3>
+                        <p>Decomposição do sistema em camadas bem definidas. Lógica de negócios isolada das funções de apresentação no terminal, utilizando estruturas de dicionários para indexação veloz de estados.</p>
+                    </div>
+
+                    <div class="case-block">
+                        <h3>Aprendizados</h3>
+                        <p>Tratamento rigoroso de exceções para inputs de usuário inválidos e domínio sobre loops de eventos (event loops) estruturados na CLI.</p>
+                    </div>
+                </div>
+
+                <div class="case-footer">
+                    <a href="https://github.com/pedrosanchez" target="_blank" rel="noopener noreferrer" class="btn-case">
+                        <span>Ver no github</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article id="calculadora-web" class="project-case-card">
+                <div class="case-header">
+                    <div class="header-left">
+                        <div class="case-mini-thumb">
+                            <img src="img/projeto2.jpg" alt="Calculadora Web">
+                        </div>
+                        <h2>Calculadora Web</h2>
+                    </div>
+                    <div class="tech-badges">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript Vanilla</span>
+                    </div>
+                </div>
+
+                <div class="case-body">
+                    <div class="case-block">
+                        <h3>O Desafio</h3>
+                        <p>Desenvolver uma interface matemática que processe operações em tempo real, garantindo precisão nos cálculos e uma experiência visual fluida e responsiva.</p>
+                    </div>
+
+                    <div class="case-block">
+                        <h3>Decisões Técnicas</h3>
+                        <p>Manipulação limpa do DOM baseada em delegação de eventos (Event Delegation) para otimizar escutadores do teclado. Implementação de parsing customizado para mitigar riscos de segurança.</p>
+                    </div>
+
+                    <div class="case-block">
+                        <h3>Aprendizados</h3>
+                        <p>Gerenciamento rigoroso de estado da aplicação (captura de operadores e pontos decimais) e alinhamento de componentes complexos com CSS Grid.</p>
+                    </div>
+                </div>
+
+                <div class="case-footer">
+                    <a href="https://github.com/pedrosanchez" target="_blank" rel="noopener noreferrer" class="btn-case">
+                        <span>Ver no github</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article id="pagina-rpg" class="project-case-card">
+                <div class="case-header">
+                    <div class="header-left">
+                        <div class="case-mini-thumb">
+                            <img src="img/Projeto3.jpg" alt="Página de RPG">
+                        </div>
+                        <h2>Página Temática de RPG</h2>
+                    </div>
+                    <div class="tech-badges">
+                        <span>HTML Semântico</span>
+                        <span>CSS Avançado</span>
+                        <span>UI Design</span>
+                    </div>
+                </div>
+
+                <div class="case-body">
+                    <div class="case-block">
+                        <h3>O Desafio</h3>
+                        <p>Construir uma landing page imersiva inspirada no universo de Dungeons & Dragons, traduzindo estéticas medievais clássicas para componentes modernos da web sem prejudicar a acessibilidade.</p>
+                    </div>
+
+                    <div class="case-block">
+                        <h3>Decisões Técnicas</h3>
+                        <p>Uso extensivo de variáveis nativas do CSS (CSS Variables) para controle de paletas complexas de alto contraste, fontes serifadas otimizadas para leitura e marcação estritamente estruturada.</p>
+                    </div>
+
+                    <div class="case-block">
+                        <h3>Aprendizados</h3>
+                        <p>Técnicas avançadas de estilização temática, manipulação de opacidade em camadas visuais e aplicação prática de tags semânticas para melhorar a indexação e leitores de tela.</p>
+                    </div>
+                </div>
+
+                <div class="case-footer">
+                    <a href="https://github.com/pedrosanchez" target="_blank" rel="noopener noreferrer" class="btn-case">
+                        <span>Ver no github</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
 
     </main>
 
-    <footer>
-        <p>
-            © 2026 Pedro Sanchez - Todos os direitos reservados.
-        </p>
-    </footer>
+    <footer class="footer">
 
+        <div class="footer-content">
+
+            <h3>
+                &lt;PedroSanchez&gt;
+            </h3>
+
+            <p>
+                Desenvolvedor front-end em formação.
+            </p>
+
+            <nav class="footer-links">
+
+                <a href="#sobre">
+                    Sobre
+                </a>
+
+                <a href="projetos.html">
+                    Projetos
+                </a>
+
+                <a href="contato.html">
+                    Contato
+                </a>
+
+            </nav>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Pedro Sanchez — Todos os direitos reservados.
+
+        </p>
+
+    </footer>
 </body>
+
 </html>

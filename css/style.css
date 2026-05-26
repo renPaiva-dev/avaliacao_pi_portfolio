@@ -542,3 +542,132 @@ section {
 
     object-fit: cover;
 }
+/* Container de Casos de Estudo */
+.cases-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Card Principal Moderno e sem blocos pesados */
+.project-case-card {
+    background: #121214; 
+    border: 1px solid #232326;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cabeçalho do Card: Alinha Mini-imagem, Título e Badges */
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #232326;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* MINIATURA DA IMAGEM: Agora com tamanho fixo e bem pequeno */
+.case-mini-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #323238;
+    flex-shrink: 0;
+}
+
+.case-mini-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-header h2 {
+    font-size: 1.3rem;
+    color: #e1e1e6;
+    margin: 0;
+}
+
+/* Tags de tecnologia sutis */
+.tech-badges {
+    display: flex;
+    gap: 6px;
+}
+
+.tech-badges span {
+    font-size: 0.7rem;
+    background: #202024;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #a8a8b3;
+    border: 1px solid #29292e;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Corpo de texto em 3 colunas limpas */
+.case-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.case-block h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    color: #41a5ee; /* Tom sutil de destaque para os títulos internos */
+}
+
+.case-block p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #a8a8b3;
+    margin: 0;
+}
+
+/* Rodapé com link sutil */
+.case-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-case {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #e1e1e6;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.btn-case:hover {
+    color: #41a5ee;
+}
+
+/* Ajuste Responsivo para telas pequenas */
+@media (max-width: 768px) {
+    .case-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .case-body {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
