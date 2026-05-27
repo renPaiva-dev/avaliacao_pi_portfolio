@@ -20,16 +20,7 @@ body {
 
     line-height: 1.6;
 
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.04) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.04) 1px,
-            transparent 1px
-        );
+
 
     background-size: 40px 40px;
 }
@@ -193,7 +184,9 @@ section {
     color: #ffffff;
 }
 
-/*Sessão sobre do desenvolvedor*/
+/* =========================
+   SOBRE
+========================= */
 
 .about-section {
     display: flex;
@@ -229,7 +222,9 @@ section {
     color: #444444;
 }
 
-/* Sessão sobre habilidades */
+/* =========================
+   HABILIDADES
+========================= */
 
 .skills-section {
     text-align: center;
@@ -276,7 +271,54 @@ section {
     color: #444444;
 }
 
-/* Sessão sobre projetos */
+/* Tabela de habilidades */
+
+.skills-table-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.skills-table-wrapper {
+    overflow-x: auto;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.skills-table thead tr {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.skills-table th {
+    padding: 14px 20px;
+    text-align: left;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.skills-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #d4d4d4;
+    color: #444444;
+}
+
+.skills-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.skills-table tbody tr:hover {
+    background-color: #ffffff;
+}
+
+/* =========================
+   PROJETOS
+========================= */
 
 .preview-projects {
     background-color: #ffffff;
@@ -321,6 +363,12 @@ section {
     transform: translateY(-5px);
 }
 
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
 .project-content {
     padding: 25px;
 }
@@ -355,7 +403,9 @@ section {
     font-weight: bold;
 }
 
-/* Sessão sobre objetivos do desenvolvedor */
+/* =========================
+   OBJETIVOS
+========================= */
 
 .goals-section {
     background-color: #f5f5f5;
@@ -375,13 +425,33 @@ section {
     margin-bottom: 25px;
 }
 
-.goals-content p {
-    margin-bottom: 20px;
+.goals-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+}
 
+.goals-list li {
+    padding-left: 20px;
+    position: relative;
     color: #444444;
 }
 
-/* Sessão para contato */
+.goals-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #111111;
+    font-weight: bold;
+}
+
+/* =========================
+   CONTATO PREVIEW
+========================= */
 
 .contact-preview {
     text-align: center;
@@ -403,7 +473,346 @@ section {
     color: #555555;
 }
 
-/* Rodapé */
+/* =========================
+   CONTATO (pagina contato.html)
+========================= */
+
+.contact-hero {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 60px 10% 50px;
+}
+
+.contact-hero h1 {
+    font-family: 'Fira Code', monospace;
+    font-size: 2.5rem;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.contact-hero p {
+    color: #555555;
+    max-width: 580px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.contact-section {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contact-info-card {
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.info-card-header {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 18px 22px;
+}
+
+.info-card-header h3 {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.info-card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.info-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.info-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #111111;
+    font-size: 0.88rem;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeee;
+    transition: color 0.2s;
+}
+
+.info-link:last-child {
+    border-bottom: none;
+}
+
+.info-link:hover {
+    color: #555555;
+}
+
+.info-link svg {
+    flex-shrink: 0;
+    color: #111111;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.contact-form-wrapper {
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.form-card-header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 12px 22px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.form-card-header span {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.78rem;
+    color: #888888;
+    margin-left: 6px;
+}
+
+.contact-form {
+    padding: 28px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    color: #111111;
+    background-color: #fafafa;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #111111;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.form-group textarea {
+    height: 130px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 13px 24px;
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #333333;
+}
+
+/* =========================
+   PROJETOS DETALHADOS
+========================= */
+
+.cases-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.project-case-card {
+    background: #121214;
+    border: 1px solid #232326;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #232326;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.case-mini-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #323238;
+    flex-shrink: 0;
+}
+
+.case-mini-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-header h2 {
+    font-size: 1.3rem;
+    color: #e1e1e6;
+    margin: 0;
+}
+
+.tech-badges {
+    display: flex;
+    gap: 6px;
+}
+
+.tech-badges span {
+    font-size: 0.7rem;
+    background: #202024;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #a8a8b3;
+    border: 1px solid #29292e;
+    font-family: 'Fira Code', monospace;
+}
+
+.case-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.case-block h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.case-block p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #a8a8b3;
+    margin: 0;
+}
+
+.case-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-case {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #e1e1e6;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.btn-case:hover {
+    color: #41a5ee;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
 
 .footer {
     background-color: #111111;
@@ -449,7 +858,9 @@ section {
     font-size: 0.9rem;
 }
 
-/* Parte responsiva */
+/* =========================
+   RESPONSIVO
+========================= */
 
 @media (max-width: 1024px) {
 
@@ -471,13 +882,11 @@ section {
 
     .header {
         flex-direction: column;
-
         gap: 20px;
     }
 
     .nav-links {
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
@@ -487,7 +896,6 @@ section {
 
     .hero-buttons {
         flex-direction: column;
-
         align-items: center;
     }
 
@@ -511,6 +919,29 @@ section {
         padding: 60px 8%;
     }
 
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .case-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .case-body {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -530,144 +961,7 @@ section {
     .btn-primary,
     .btn-secondary {
         width: 100%;
-
         text-align: center;
     }
 
-}
-.project-card img {
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-}
-/* Container de Casos de Estudo */
-.cases-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-/* Card Principal Moderno e sem blocos pesados */
-.project-case-card {
-    background: #121214; 
-    border: 1px solid #232326;
-    border-radius: 8px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Cabeçalho do Card: Alinha Mini-imagem, Título e Badges */
-.case-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #232326;
-    padding-bottom: 16px;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-/* MINIATURA DA IMAGEM: Agora com tamanho fixo e bem pequeno */
-.case-mini-thumb {
-    width: 64px;
-    height: 64px;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid #323238;
-    flex-shrink: 0;
-}
-
-.case-mini-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.case-header h2 {
-    font-size: 1.3rem;
-    color: #e1e1e6;
-    margin: 0;
-}
-
-/* Tags de tecnologia sutis */
-.tech-badges {
-    display: flex;
-    gap: 6px;
-}
-
-.tech-badges span {
-    font-size: 0.7rem;
-    background: #202024;
-    padding: 3px 8px;
-    border-radius: 4px;
-    color: #a8a8b3;
-    border: 1px solid #29292e;
-    font-family: 'Fira Code', monospace;
-}
-
-/* Corpo de texto em 3 colunas limpas */
-.case-body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.case-block h3 {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-    color: #41a5ee; /* Tom sutil de destaque para os títulos internos */
-}
-
-.case-block p {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: #a8a8b3;
-    margin: 0;
-}
-
-/* Rodapé com link sutil */
-.case-footer {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.btn-case {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: #e1e1e6;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: color 0.2s;
-}
-
-.btn-case:hover {
-    color: #41a5ee;
-}
-
-/* Ajuste Responsivo para telas pequenas */
-@media (max-width: 768px) {
-    .case-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .case-body {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
 }

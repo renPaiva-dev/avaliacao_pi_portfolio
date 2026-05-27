@@ -1,31 +1,38 @@
-<!-- contato.html -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Entre em contato com Pedro Sanchez para conversar sobre projetos e oportunidades.">
+    <meta name="author" content="Pedro Sanchez">
     <title>Contato | Pedro Sanchez</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+    <header class="header">
 
-    <!-- Cabeçalho -->
-    <header>
         <div class="logo">
-            <h1>Pedro Sanchez</h1>
+
+            <h1>
+                &lt;PedroSanchez&gt;
+            </h1>
+
         </div>
 
-        <!-- Navegação -->
-        <nav>
+        <nav class="navbar">
+
             <ul class="nav-links">
 
                 <li>
                     <a href="index.html">
-                        Sobre mim
+                        Sobre
                     </a>
                 </li>
 
@@ -42,113 +49,125 @@
                 </li>
 
             </ul>
+
         </nav>
+
     </header>
 
-    <!-- Conteúdo principal -->
     <main>
 
-        <!-- Seção de contato -->
+        <div class="contact-hero">
+            <h1>Contato()</h1>
+            <p>Gostou do portfólio? Entre em contato para conversar sobre projetos, oportunidades ou tecnologia.</p>
+        </div>
+
         <section class="contact-section">
 
-            <h2>Entre em Contato</h2>
+      <!-- Coluna de informações -->
+<aside>
+    <div class="contact-info-card">
 
-            <p>
-                Caso queira conversar sobre projetos,
-                oportunidades ou tecnologia, envie
-                uma mensagem pelo formulário abaixo.
-            </p>
+        <div class="info-card-header">
+            <h3>// info_contato</h3>
+        </div>
 
+        <div class="info-card-body">
+
+            <div class="info-group">
+                <label>Status</label>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Disponível para oportunidades
+                </div>
+            </div>
+
+            <div class="info-group">
+                <label>E-mail</label>
+                <a href="mailto:pedro@email.com" class="info-link">
+                    pedro@email.com
+                </a>
+            </div>
+
+            <div class="info-group">
+                <label>Redes</label>
+                <a href="https://github.com/pedrosanchez" target="_blank" rel="noopener" class="info-link">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/pedrosanchez" target="_blank" rel="noopener" class="info-link">
+                    LinkedIn
+                </a>
+            </div>
+
+            <div class="info-group">
+                <label>Localização</label>
+                <div class="info-link">
+                    Brasil — Remoto
+                </div>
+            </div>
+
+        </div>
+    </div>
+</aside>
             <!-- Formulário -->
-            <form action="#" method="post">
+            <div class="contact-form-wrapper">
 
-                <!-- Campo nome -->
-                <div class="form-group">
-
-                    <label for="nome">
-                        Nome:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite seu nome"
-                        required
-                    >
-
+                <div class="form-card-header">
+                    <div class="form-dot" style="background:#ff5f56;"></div>
+                    <div class="form-dot" style="background:#ffbd2e;"></div>
+                    <div class="form-dot" style="background:#27c93f;"></div>
+                    <span>nova_mensagem.js</span>
                 </div>
 
-                <!-- Campo email -->
-                <div class="form-group">
+                <form id="contactForm" class="contact-form" novalidate>
 
-                    <label for="email">
-                        E-mail:
-                    </label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu e-mail"
-                        required
-                    >
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Ex: Oportunidade de estágio" required>
+                    </div>
 
-                </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
 
-                <!-- Campo assunto -->
-                <div class="form-group">
+                    <button type="submit" class="btn-submit">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+                        Enviar Mensagem
+                    </button>
 
-                    <label for="assunto">
-                        Assunto:
-                    </label>
 
-                    <input
-                        type="text"
-                        id="assunto"
-                        name="assunto"
-                        placeholder="Digite o assunto"
-                        required
-                    >
 
-                </div>
-
-                <!-- Campo mensagem -->
-                <div class="form-group">
-
-                    <label for="mensagem">
-                        Mensagem:
-                    </label>
-
-                    <textarea
-                        id="mensagem"
-                        name="mensagem"
-                        rows="6"
-                        placeholder="Digite sua mensagem"
-                        required
-                    ></textarea>
-
-                </div>
-
-                <!-- Botão -->
-                <button type="submit">
-                    Enviar Mensagem
-                </button>
-
-            </form>
+                </form>
+            </div>
 
         </section>
 
     </main>
 
-    <!-- Rodapé -->
-    <footer>
-
-        <p>
-            © 2026 Pedro Sanchez - Todos os direitos reservados.
-        </p>
-
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>&lt;PedroSanchez&gt;</h3>
+            <p>Desenvolvedor front-end em formação.</p>
+            <nav class="footer-links">
+                <a href="index.html#sobre">Sobre</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+        <p class="copyright">© 2026 Pedro Sanchez — Todos os direitos reservados.</p>
     </footer>
+
 
 </body>
 </html>
