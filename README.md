@@ -71,8 +71,8 @@ O portfólio possui foco em design simples e que seja de fácil entendimento, co
 ## Link do GitHub Pages
 https://renpaiva-dev.github.io/avaliacao_pi_portfolio/
 ---
-
-
+## Link do vídeo
+https://youtu.be/WCBJCgpORO0
 ---
 
 ## Estrutura do Projeto
