@@ -69,7 +69,7 @@ O portfólio possui foco em design simples e que seja de fácil entendimento, co
 ---
 
 ## Link do GitHub Pages
-
+https://renpaiva-dev.github.io/avaliacao_pi_portfolio/
 ---
 
 
@@ -91,7 +91,6 @@ portfolio/
 │   ├── Projeto1.jpg
 │   ├── Projeto2.jpg
 │   ├── Projeto3.jpg
-│   └── pedro_sanchez.jpg
 │   └── perfil.jpg
 │
 └── README.md
